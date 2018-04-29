@@ -58,7 +58,7 @@ public class AvisalaServer {
             System.out.print("\nevent " + event);
             System.out.print("\ntrainLoss " + trainLoss);
 
-            ApnsService service = APNS.newService().withCert("/home/hohne/projeto/avisala/cert/dev/Certificates_APNS.p12", "****").withSandboxDestination().build();
+            ApnsService service = APNS.newService().withCert("cert/dev/Certificates_APNS.p12", "heyyou31").withSandboxDestination().build();
             String payload = APNS.newPayload().alertBody(model + ' ' + event + ' '  + trainLoss).build();
     	      service.push(token, payload);
 
